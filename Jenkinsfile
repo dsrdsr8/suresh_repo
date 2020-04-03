@@ -5,6 +5,7 @@ pipeline {
       stage('Hello') {
          steps {
             echo 'Hello World sample functions'
+	    echo 'Added a blank line to trigger job from WHook'
          }
       }
       stage ('Terraform Init'){
@@ -24,7 +25,8 @@ pipeline {
              sh 'terraform apply -input=false -auto-approve'
           }
       }
-      
+     
+
 	  
       /* stage ('Terraform Destroy'){
           steps {
